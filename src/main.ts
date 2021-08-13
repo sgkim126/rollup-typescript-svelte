@@ -1,9 +1,7 @@
-function test_function(a: number): void {
-    console.log(a);
-}
+import App from "./components/App.svelte";
 
-const a = 1;
+const app = new App({
+    target: document.body,
+});
 
-document.onload = () => {
-    test_function(a);
-}
+export default app;
