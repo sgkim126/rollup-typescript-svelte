@@ -6,13 +6,18 @@
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
-        "lint": "svelte-check"
+        "format": "eslint --fix './src/**/*.{json,svelte,ts}'",
+        "lint": "svelte-check && eslint './src/**/*.{json,svelte,ts}'"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^20.0.0",
         "@rollup/plugin-node-resolve": "^13.0.4",
         "@rollup/plugin-typescript": "^8.2.5",
         "@tsconfig/svelte": "^2.0.1",
+        "@typescript-eslint/eslint-plugin": "^4.29.2",
+        "@typescript-eslint/parser": "^4.29.2",
+        "eslint": "^7.32.0",
+        "eslint-plugin-svelte3": "^3.2.0",
         "rollup": "^2.56.2",
         "rollup-plugin-copy": "^3.4.0",
         "rollup-plugin-svelte": "^7.1.0",
