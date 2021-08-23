@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import serve from "rollup-plugin-serve";
 import svelte from "rollup-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
+import { terser } from "rollup-plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 
 const dev = !!process.env.ROLLUP_WATCH;
@@ -37,6 +38,8 @@ if (dev) {
             port: 8888,
         })
     );
+} else {
+    plugins.push(terser());
 }
 
 export default {
